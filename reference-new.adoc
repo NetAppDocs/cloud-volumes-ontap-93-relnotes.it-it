@@ -1,0 +1,90 @@
+---
+sidebar: sidebar 
+permalink: reference-new.html 
+keywords: 'what"s new, new, features, release notes, enhancements' 
+summary: Cloud ONTAP 9.3 include diverse nuove funzionalità e miglioramenti. 
+---
+= Novità del cloud ONTAP 9.3
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud ONTAP 9.3 include diverse nuove funzionalità e miglioramenti.
+
+
+
+== Miglioramenti di ONTAP Cloud ha in AWS
+
+La versione 9.3 affronta la resilienza delle coppie cloud ha di ONTAP per tollerare i problemi di rete o le latenze transitori più elevate all'interno dell'ecosistema AWS e per garantire la disponibilità dei dati dei clienti durante tali eventi.
+
+
+
+== Supporto per la regione UE (Parigi) in AWS
+
+Il cloud ONTAP è ora supportato nell'area UE (Parigi) di AWS. In base ai tipi di istanze supportati in questa regione, le seguenti configurazioni cloud di ONTAP sono disponibili nell'area UE (Parigi):
+
+* Standard cloud ONTAP (r4.xlarge)
+* Cloud premium ONTAP (r4,2 x grande)
+* ONTAP Cloud BYOL (r4.xlarge e r4,2 x Large)
+
+
+
+
+== Prestazioni di scrittura migliorate con i dischi Azure Premium
+
+Le performance di scrittura per il cloud ONTAP sono state migliorate in Azure quando si utilizzano dischi di storage premium. Il miglioramento è supportato con lo standard cloud ONTAP, Premium e BYOL.
+
+
+NOTE: I miglioramenti delle prestazioni di scrittura non sono supportati quando si utilizza il tipo di macchina virtuale DS3_v2.
+
+
+
+== Aumento del limite di capacità per il cloud ONTAP Premium e BYOL in Azure
+
+Il limite di capacità per ONTAP Cloud Premium e ONTAP Cloud BYOL è raddoppiato fino a 252 TB quando si utilizzano i tipi di macchine virtuali DS5_v2 o DS14_v2.
+
+
+NOTE: Questa modifica è possibile a causa di un aumento del numero di dischi disponibili per ogni macchina virtuale Azure. Non modifica la capacità massima per aggregato.
+
+
+
+== Supporto per le regioni Azure US Gov
+
+Ora puoi implementare Cloud Manager e ONTAP BYOL nelle seguenti aree di Azure:
+
+* US Gov Arizona
+* US Gov Texas
+* VIRGINIA US Gov
+
+
+Per implementare Cloud Manager in queste regioni, è necessario creare una macchina virtuale CentOS 7.3 da Azure Marketplace, scaricare il programma di installazione di Cloud Manager dal sito di supporto NetApp e installare il software. Dopo l'esecuzione di Cloud Manager, puoi implementare i sistemi di business business cloud di ONTAP in queste regioni come in qualsiasi altra regione.
+
+
+
+== Supporto per il disaster recovery SVM
+
+Il cloud ONTAP supporta una SVM per il servizio dei dati e una SVM di destinazione utilizzata per il disaster recovery. È possibile attivare la SVM di destinazione per l'accesso ai dati in caso di interruzione della SVM di origine.
+
+Il disaster recovery SVM è il mirroring asincrono dei dati SVM e della configurazione da una SVM di origine a una SVM di destinazione. È possibile attivare rapidamente una SVM di destinazione per l'accesso ai dati se la SVM di origine non è più disponibile.
+
+
+NOTE: Cloud Manager non fornisce alcun supporto di configurazione o orchestrazione per il disaster recovery SVM. Inoltre, non supporta attività correlate allo storage su SVM aggiuntive. Per il disaster recovery di SVM, è necessario utilizzare System Manager o CLI.
+
+https://library.netapp.com/ecm/ecm_get_file/ECMLP2839856["Guida rapida alla preparazione del disaster recovery per SVM"^]
+
+https://library.netapp.com/ecm/ecm_get_file/ECMLP2839857["Guida di SVM Disaster Recovery Express"^]
+
+
+
+== Note sull'aggiornamento
+
+* Gli aggiornamenti devono essere completati da Cloud Manager. Non aggiornare il cloud ONTAP utilizzando Gestione di sistema o l'interfaccia CLI. In questo modo si può influire sulla stabilità del sistema.
+* Puoi eseguire l'aggiornamento a ONTAP 9.3 da ONTAP 9.2.
+* L'aggiornamento di un sistema a nodo singolo porta il sistema offline per un massimo di 25 minuti, durante i quali l'i/o viene interrotto.
+* L'aggiornamento di una coppia ha è senza interruzioni e l'i/o è ininterrotto. Durante questo processo di aggiornamento senza interruzioni, ogni nodo viene aggiornato in tandem per continuare a fornire i/o ai client.
+

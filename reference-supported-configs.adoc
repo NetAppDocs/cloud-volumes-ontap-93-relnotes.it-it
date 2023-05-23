@@ -1,0 +1,105 @@
+---
+sidebar: sidebar 
+permalink: reference-supported-configs.html 
+keywords: ec2, instance, type, vm, explore, standard, premium, byol, capacity, maximum, virtual machine, ontap cloud, supported, configurations 
+summary: Il cloud ONTAP è disponibile in diverse configurazioni in AWS e Azure. 
+---
+= Configurazioni supportate
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Il cloud ONTAP è disponibile in AWS e Azure in due opzioni di prezzo: Pay-as-you-go e Bring Your Own License (BYOL). Per il pay-as-you-go, puoi scegliere tra tre configurazioni: Explore, Standard o Premium.
+
+
+
+== Cloud ONTAP per AWS
+
+In AWS, puoi implementare il cloud ONTAP come un singolo sistema o una coppia ha.
+
+[cols="h,d,d,d,d"]
+|===
+|  | Esplora | Standard | Premium | BYOL 
+
+
+| Tipi di istanze EC2 | m4.xlange  a| 
+* m4,2 x grande
+* r4.xlange
+
+ a| 
+* c4.4xgrande
+* c4.8xlarge
+* m4,4xgrande
+* r4,2 x grande
+
+ a| 
+* c4.4xgrande
+* c4.8xlarge
+* m4.xlange
+* m4,2 x grande
+* m4,4xgrande
+* r4.xlange
+* r4,2 x grande
+
+
+
+
+| Storage sottostante 4+| SSD General purpose, SSD IOPS con provisioning, HDD ottimizzati per il throughput e HDD a freddo, fino a 16 TIB per disco 
+
+
+| Limite di capacità della licenza | 2 TIB | 10 TIB | 368 TIB | 368 TIB per licenza 
+|===
+Note:
+
+. Le configurazioni pay-as-you-go non sono supportate in GovCloud (USA).
+. Quando si sceglie un tipo di istanza EC2, è possibile specificare se si tratta di un'istanza condivisa o dedicata.
+. Le migliori prestazioni di scrittura sono supportate quando si utilizzano SSD EBS con standard cloud ONTAP, Premium e BYOL.
+. Il tiering dei dati è supportato con lo standard cloud ONTAP, Premium e BYOL.
+. Se si abilita il tiering dei dati, il limite di capacità di un sistema rimane invariato. Il limite di capacità include sia dischi che storage a oggetti.
+. Per il supporto della regione AWS, vedere https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes Global Regions"].
+
+
+
+
+== Cloud ONTAP per Azure
+
+In Azure, puoi implementare il cloud ONTAP come sistema a nodo singolo.
+
+[cols="h,d,d,d,d"]
+|===
+|  | Esplora | Standard | Premium | BYOL 
+
+
+| Tipi di macchine virtuali | DS3_v2  a| 
+* DS4_v2
+* DS13_v2
+
+ a| 
+* DS5_v2
+* DS14_v2
+
+ a| 
+* DS3_v2
+* DS4_v2
+* DS5_v2
+* DS13_v2
+* DS14_v2
+
+
+
+
+| Storage sottostante 4+| Dischi gestiti HDD standard, dischi gestiti SSD standard e dischi gestiti SSD Premium, fino a 32 TIB per disco 
+
+
+| Limite di capacità della licenza | 2 TIB | 10 TIB | 368 TIB | 368 TIB per licenza 
+|===
+Note:
+
+. Le migliori prestazioni di scrittura sono supportate quando si utilizzano dischi di storage Azure Premium con ONTAP Cloud Standard, Premium e BYOL, ma non quando si utilizza il tipo di macchina virtuale DS3_v2.
+. Per il supporto della regione Azure, vedere https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes Global Regions"].
+
