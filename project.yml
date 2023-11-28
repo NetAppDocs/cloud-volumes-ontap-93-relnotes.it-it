@@ -80,4 +80,7 @@ homepage:
     - title: Blog Cloud Central
       url: https://cloud.netapp.com/blog
     - title: Webinar sul cloud
-      url: https://cloud.netapp.com/events
+      url: https://cloud.netapp.com/event
+product-family:
+  name: BlueXP
+  repo: bluexp-family
