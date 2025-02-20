@@ -1,6 +1,6 @@
 ---
 settings:
-  name: ONTAP Cloud release notes
+  name: ONTAP Cloud
   downlevel: true
   platform: cloud
   internal:
@@ -52,7 +52,7 @@ settings:
   langs: it-it,us-en,de-de,es-es,fr-fr,pt-br,ja-jp,ko-kr,zh-cn,zh-tw
 sidebar:
   entries:
-  - title: Note di rilascio home
+  - title: Note sulla versione di ONTAP Cloud 9,3
     url: "/index.html"
   - title: Novità
     url: "/reference-new.html"
