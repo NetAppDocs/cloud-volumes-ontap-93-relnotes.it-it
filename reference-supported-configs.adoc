@@ -61,7 +61,7 @@ Note:
 . Le migliori prestazioni di scrittura sono supportate quando si utilizzano SSD EBS con standard cloud ONTAP, Premium e BYOL.
 . Il tiering dei dati è supportato con lo standard cloud ONTAP, Premium e BYOL.
 . Se si abilita il tiering dei dati, il limite di capacità di un sistema rimane invariato. Il limite di capacità include sia dischi che storage a oggetti.
-. Per il supporto della regione AWS, vedere https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes Global Regions"].
+. Per il supporto regionale AWS, vedere https://bluexp.netapp.com/cloud-volumes-global-regions["Cloud Volumes Global Regions"].
 
 
 
@@ -101,5 +101,5 @@ In Azure, puoi implementare il cloud ONTAP come sistema a nodo singolo.
 Note:
 
 . Le migliori prestazioni di scrittura sono supportate quando si utilizzano dischi di storage Azure Premium con ONTAP Cloud Standard, Premium e BYOL, ma non quando si utilizza il tipo di macchina virtuale DS3_v2.
-. Per il supporto della regione Azure, vedere https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes Global Regions"].
+. Per il supporto dell'area Azure, vedere https://bluexp.netapp.com/cloud-volumes-global-regions["Cloud Volumes Global Regions"].
 
